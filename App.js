@@ -3,13 +3,13 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Header from "./src/components/Header";
 import Footer from "./src/components/Footer";
 import Icon from "react-native-vector-icons/FontAwesome";
-import Productos from "./Productos";
+import Productos from "./src/pages/Productos";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationContainer } from "@react-navigation/native";
 
-const bottomImage = require("./assets/imageninicio.jpg");
+const bottomImage = require("./src/assets/imageninicio.jpg");
 
 const AppNavigator = () => {
   return (
@@ -30,6 +30,8 @@ const App = () => {
     setShowProducts(true);
   };
 
+  if (!loaded) return null;
+
   return (
     <View style={styles.container}>
       <Header />
@@ -46,7 +48,7 @@ const App = () => {
           >
             <Image
               style={styles.image}
-              source={require("./assets/foto1.jpg")}
+              source={require("./src/assets/foto1.jpg")}
             />
             <Text style={styles.imageText}>Productos</Text>
           </TouchableOpacity>
@@ -54,7 +56,7 @@ const App = () => {
           <View style={styles.imageContainer}>
             <Image
               style={styles.image}
-              source={require("./assets/foto2.jpg")}
+              source={require("./src/assets/foto2.jpg")}
             />
             <Text style={styles.imageText}>Recetas</Text>
           </View>
@@ -62,7 +64,7 @@ const App = () => {
           <View style={styles.imageContainer}>
             <Image
               style={styles.image}
-              source={require("./assets/foto3.jpg")}
+              source={require("./src/assets/foto3.jpg")}
             />
             <Text style={styles.imageText}>Comunidad</Text>
           </View>
@@ -70,7 +72,7 @@ const App = () => {
           <View style={styles.imageContainer}>
             <Image
               style={styles.image}
-              source={require("./assets/foto4.jpg")}
+              source={require("./src/assets/foto4.jpg")}
             />
             <Text style={styles.imageText}>Unite a mi equipo</Text>
           </View>
@@ -111,7 +113,6 @@ const styles = StyleSheet.create({
   imageText: {
     padding: 10,
     textAlign: "center",
-    fontSize: 30,
     fontFamily: "Roboto-Black",
   },
   bottomImageContainer: {

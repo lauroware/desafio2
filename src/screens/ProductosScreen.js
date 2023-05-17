@@ -9,7 +9,7 @@ const Productos = () => {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require("./assets/bizcuchuelo.jpg")}
+            source={require("../assets/bizcuchuelo.jpg")}
           />
           <Text style={styles.imageText}>Torta</Text>
         </View>
@@ -17,7 +17,7 @@ const Productos = () => {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require("./assets/gelatina.jpg")}
+            source={require("../assets/gelatina.jpg")}
           />
           <Text style={styles.imageText}>Gelatina</Text>
         </View>
@@ -25,7 +25,7 @@ const Productos = () => {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require("./assets/huevo frito.jpg")}
+            source={require("../assets/huevo-frito.jpg")}
           />
           <Text style={styles.imageText}>Huevo Frito</Text>
         </View>
@@ -33,7 +33,7 @@ const Productos = () => {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require("./assets/torta frita.jpg")}
+            source={require("../assets/torta-frita.jpg")}
           />
           <Text style={styles.imageText}>Torta Frita</Text>
         </View>
